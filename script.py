@@ -10,7 +10,7 @@ def main():
     files = [f for f in listdir(path) if isfile(join(path, f))]
     for i in files:
         print(f'opening {i}            {datetime.now().strftime("%H:%M:%S")}')
-        startfile(f'{getcwd()}\\Replays\\Record\\{i}')
+        startfile(f'{getcwd()}\\replays\\{i}')
         sleep(30)
         while "WorldOfWarships64.exe" in (p.name() for p in psutil.process_iter()):
             sleep(3)
